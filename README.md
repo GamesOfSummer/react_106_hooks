@@ -1,15 +1,11 @@
 # React 106
-React 105 - read from an API stream, display data, pass info to another class via prop, use Google Maps
+React 106 - learn about hooks
 
 # Summary
 * Tools used - Visual Studio Code, SmartGit, a Pomodoro timer
 
-# Things to note -
-* coming from an enterprise front-end background, you'll see at the bottom of my to-do list things that I would want to later add. 
 
-# Checklist
 
-* [X] - Get React Create App in
-* [X] - add gitignore 
-* [X] - Install Material bootstrap (Assuming them have sliding animations - check on that!)
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
+
 
