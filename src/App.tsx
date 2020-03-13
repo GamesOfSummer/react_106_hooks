@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { MDBCol, MDBContainer, MDBRow, MDBNavbar, MDBNavbarBrand } from "mdbreact";
 import RestaurantList from './RestaurantList';
+import { Example } from './Example';
 import { restaurant, defaultResturant } from './types';
 
 export interface AppProps { restaurants: [restaurant]; }
@@ -33,7 +34,11 @@ class App extends Component<AppProps, AppState> {
       <div className="App">
         <MDBContainer fluid>
           <MDBRow>
-            <MDBCol md="1"></MDBCol>
+            <MDBCol md="1">
+
+              <Example />
+
+            </MDBCol>
             <MDBCol md="10">
               <MDBNavbar className="white-text" style={{ position: 'relative', height: '50px', backgroundColor: "#43e895" }}>
                 <MDBNavbarBrand style={{ position: 'absolute', left: '45%' }}>
