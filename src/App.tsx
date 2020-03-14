@@ -1,30 +1,30 @@
-import React, { Component } from "react";
-import { MDBCol, MDBContainer, MDBRow, MDBNavbar, MDBNavbarBrand } from "mdbreact";
-import RestaurantList from './RestaurantList';
+import React, { Component } from 'react';
+import { MDBCol, MDBContainer, MDBRow } from 'mdbreact';
 import { Example } from './Example';
-import { restaurant, defaultResturant } from './types';
+import { defaultDragon } from './types';
+import DisplayDragonColor from './DisplayDragonColor';
+import DisplayDragonName from './DisplayDragonName';
 
-export interface AppProps { restaurants: [restaurant]; }
-export interface AppState { restaurants: [restaurant]; }
+class App extends Component {
+    render() {
+        const dragon = defaultDragon();
 
-class App extends Component<AppProps, AppState> {
-
-  render() {
-    return (
-      <div className="App">
-        <MDBContainer fluid>
-          <MDBRow>
-            <MDBCol md="1">
-            </MDBCol>
-            <MDBCol md="10">
-              <Example />
-            </MDBCol>
-            <MDBCol md="1"></MDBCol>
-          </MDBRow>
-        </MDBContainer>
-      </div>
-    );
-  }
+        return (
+            <div className="App">
+                <MDBContainer fluid>
+                    <MDBRow>
+                        <MDBCol md="6">
+                            <DisplayDragonColor dragon={dragon} />
+                            <DisplayDragonName dragon={dragon} />
+                        </MDBCol>
+                        <MDBCol md="6">
+                            <Example />
+                        </MDBCol>
+                    </MDBRow>
+                </MDBContainer>
+            </div>
+        );
+    }
 }
 
 export default App;
