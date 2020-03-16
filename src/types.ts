@@ -1,4 +1,4 @@
-export interface dragon {
+export interface Dragon {
     name: string;
     color: string;
     category: string;
@@ -12,7 +12,7 @@ export interface dragon {
     };
 }
 
-export function defaultDragon(): dragon {
+export function defaultDragon(): Dragon {
   return {
     name: '',
     color: '',

@@ -1,20 +1,24 @@
 import { useState, useEffect } from 'react';
-import { dragon } from './types';
+// eslint-disable-next-line no-unused-vars
+import { Dragon } from './types';
 
-export function useDragonStats(dragon: dragon): string {
-    const [isRed, setIsRed] = useState(null);
+export default function useDragonStats(dragon: Dragon): string {
+  const [isRed] = useState(null);
 
-    useEffect(() => {
-        function handleStatusChange(dragon: dragon) {
-            console.log('handleStatusChange -> dragon', dragon);
-            //setIsRed(dragon.color);
-        }
+  useEffect(() => {
+    // eslint-disable-next-line no-unused-vars
+    function handleStatusChange(dragon2: Dragon) : void {
+      console.log('handleStatusChange -> dragon', dragon2);
+      // setIsRed(dragon.color);
+    }
 
-        // ChatAPI.subscribeToFriendStatus(friendID, handleStatusChange);
-        return () => {
-            console.log('RETURN handleStatusChange -> dragon', dragon);
-        };
-    });
+    // ChatAPI.subscribeToFriendStatus(friendID, handleStatusChange);
+    return () => {
+      console.log('RETURN handleStatusChange -> dragon', dragon);
+    };
+  });
 
-    return dragon.color;
+  console.log('RETURN handleStatusChange -> dragon', isRed);
+
+  return dragon.color;
 }

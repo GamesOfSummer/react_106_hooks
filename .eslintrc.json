@@ -18,8 +18,13 @@
     },
     "plugins": ["react", "@typescript-eslint"],
     "rules": {
-        "import/extentions": "off",
+        "import/extensions": [
+            "warn",
+            "never"
+          ],
         "import/no-unresolved": "off",
-        "linebreak-style": "off"
+        "linebreak-style": "off",
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx"] }],
+        "no-console": "off"
     }
 }

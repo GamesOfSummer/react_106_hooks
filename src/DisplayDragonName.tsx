@@ -1,19 +1,30 @@
-import React, { Component } from 'react';
-import { dragon } from './types';
-import { useDragonStats } from './useDragonStats';
+import React from 'react';
+// import PropTypes from 'prop-types';
+// import { Dragon, defaultDragon } from './types';
+import useDragonStats from './useDragonStats';
+// eslint-disable-next-line no-unused-vars
+import { Dragon } from './types';
 
 interface CardProps {
-    dragon: dragon;
+    dragon: Dragon;
 }
 
-export default class DisplayDragonName extends Component<CardProps> {
-    render() {
-        const isRed = useDragonStats(this.props.dragon);
+const DisplayDragonName = (d: any) => {
+  const isRed = useDragonStats(d);
 
-        return (
-            <div>
-                <p>displayDragonName :: Is Red -{isRed}</p>
-            </div>
-        );
-    }
-}
+  return (
+    <div>
+      <div>
+        <p>
+          displayDragonColor :: Is Red -
+          {isRed}
+        </p>
+      </div>
+    </div>
+  );
+};
+
+// DisplayDragonColor.propTypes = { d: PropTypes.instanceOf(Dragon) };
+// DisplayDragonColor.defaultProps = { d: defaultDragon() };
+
+export default DisplayDragonName;
