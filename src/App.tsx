@@ -3,7 +3,7 @@ import { MDBCol, MDBContainer, MDBRow } from 'mdbreact';
 import { Example } from './Example';
 import { defaultDragon } from './types';
 import DisplayDragonColor from './DisplayDragonColor';
-import DisplayDragonName from './DisplayDragonName';
+// import DisplayDragonName from './DisplayDragonName';
 
 const App = () => {
   const dragon = defaultDragon();
@@ -13,8 +13,7 @@ const App = () => {
       <MDBContainer fluid>
         <MDBRow>
           <MDBCol md="6">
-            <DisplayDragonColor d={{ dragon }} />
-            <DisplayDragonName dragon={{ dragon }} />
+            <DisplayDragonColor name={dragon.name} />
           </MDBCol>
           <MDBCol md="6">
             <Example />

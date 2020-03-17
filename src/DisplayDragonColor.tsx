@@ -1,16 +1,15 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 // import { Dragon, defaultDragon } from './types';
-import useDragonStats from './useDragonStats';
-// eslint-disable-next-line no-unused-vars
-import { Dragon } from './types';
+import useIsDragonRed from './useIsDragonRed';
 
-interface CardProps {
-    dragon: Dragon;
+
+interface DisplayDragonColorProps {
+  name: string;
 }
 
-const DisplayDragonColor = (d: any) => {
-  const isRed = useDragonStats(d);
+const DisplayDragonColor : React.FC<DisplayDragonColorProps> = ({ name }) => {
+  const isRed = useIsDragonRed(name);
 
   return (
     <div>
@@ -24,7 +23,7 @@ const DisplayDragonColor = (d: any) => {
   );
 };
 
-// DisplayDragonColor.propTypes = { d: PropTypes.instanceOf(Dragon) };
-// DisplayDragonColor.defaultProps = { d: defaultDragon() };
+DisplayDragonColor.propTypes = { name: PropTypes.string.isRequired };
+// DisplayDragonColor.defaultProps = { name: '' };
 
 export default DisplayDragonColor;
