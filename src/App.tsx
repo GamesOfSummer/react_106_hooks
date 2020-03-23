@@ -14,6 +14,7 @@ const App = () => {
         <MDBRow>
           <MDBCol md="6">
             <DisplayDragonAge ageVar={dragon.age} />
+            <DisplayDragonAge ageVar={dragon.age + 15000} />
           </MDBCol>
           <MDBCol md="6">
             <Example />
