@@ -2,7 +2,7 @@ import React from 'react';
 import { MDBCol, MDBContainer, MDBRow } from 'mdbreact';
 import Example from './Example';
 import { defaultDragon } from './types';
-import DisplayDragonAge from './DisplayDragonAge';
+import DisplayDragonAge from './component/DisplayDragonAge';
 // import DisplayDragonName from './DisplayDragonName';
 
 const App = () => {

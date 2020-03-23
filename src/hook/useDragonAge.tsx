@@ -4,16 +4,21 @@ interface DragonAgeProps {
   ageVar: number;
 }
 
-const useDragonAge = (ageVar : DragonAgeProps) => {
-  const [age, setAge] = useState({ ageVar });
+const useDragonAge = ({ ageVar } : DragonAgeProps) => {
+  const [age, setAge] = useState<number>(ageVar);
 
   useEffect(() => {
     console.log('useDragonAge -> setAge', age);
     console.log('useDragonAge -> setAge', setAge);
-    // setAge(age + 1);
+
+    function handleAgeChange(ageVar2 : number) {
+      setAge(ageVar2 + 1);
+    }
+
+    handleAgeChange(age);
   });
 
-  return true;
+  return age;
 };
 
 export default useDragonAge;
