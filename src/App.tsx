@@ -1,6 +1,6 @@
 import React from 'react';
 import { MDBCol, MDBContainer, MDBRow } from 'mdbreact';
-import { Example } from './Example';
+import Example from './Example';
 import { defaultDragon } from './types';
 import DisplayDragonColor from './DisplayDragonColor';
 // import DisplayDragonName from './DisplayDragonName';

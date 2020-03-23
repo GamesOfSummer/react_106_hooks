@@ -1,30 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import { Dragon, defaultDragon } from './types';
 import useDragonAge from './useDragonAge';
 
 
 interface DisplayDragonColorProps {
-  name: string;
+  ageVar: number;
 }
 
-// eslint-disable-next-line no-unused-vars
-const DisplayDragonColor : React.FC<DisplayDragonColorProps> = ({ name }) => {
-  const age = useDragonAge();
+const DisplayDragonColor = (ageVar : DisplayDragonColorProps) => {
+  const age2 = useDragonAge(ageVar);
 
   return (
     <div>
       <div>
         <p>
           displayDragonColor :: Is Red -
-          {age}
+          {age2}
         </p>
       </div>
     </div>
   );
 };
 
-DisplayDragonColor.propTypes = { name: PropTypes.string.isRequired };
-// DisplayDragonColor.defaultProps = { name: '' };
+// eslint-disable-next-line react/no-unused-prop-types
+DisplayDragonColor.propTypes = { ageVar: PropTypes.number.isRequired };
 
 export default DisplayDragonColor;
