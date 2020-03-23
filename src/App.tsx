@@ -13,7 +13,7 @@ const App = () => {
       <MDBContainer fluid>
         <MDBRow>
           <MDBCol md="6">
-            <DisplayDragonColor name={dragon.name} />
+            <DisplayDragonColor ageVar={dragon.age} />
           </MDBCol>
           <MDBCol md="6">
             <Example />

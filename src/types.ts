@@ -1,6 +1,7 @@
 export interface Dragon {
     name: string;
     color: string;
+    age: number;
     category: string;
     location: {
         address: string;
@@ -16,6 +17,7 @@ export function defaultDragon(): Dragon {
   return {
     name: '',
     color: '',
+    age: 0,
     category: '',
     location: {
       address: '',
